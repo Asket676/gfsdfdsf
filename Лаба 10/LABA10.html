@@ -1,0 +1,99 @@
+<html >
+<head>
+<meta charset="UTF-8">
+<title>10</title>
+</head>
+<body>
+
+    <div class="Picture">
+        <img src="1.png" id="img_1" onclick="invert()" ondblclick="uninvert()">
+        
+    </div>
+    <form>
+        <label>
+            <input type="radio" name="what" value="otrazheniye" onclick="otrazheniye()">
+            Отразить
+        </label>
+
+        <label>
+            <input type="radio" name="what" value="uvelichit" onclick="uvelichit()">
+            Увеличить
+        </label>
+
+        <label>
+            <input type="radio" name="what" value="transperency" onclick="transperency()">
+            Сделать прозрачным
+        </label>
+
+        <label>
+            <input type="radio" name="what" value="povernut" onclick="povernut()">
+            Повернуть
+        </label>
+        
+
+<select id="chan" onclick="twohundreed()">
+    <option value = "1"> 200x200 </option>
+    <option value = "2"> 300x300 </option>
+</select>
+
+    </form>
+
+<script>
+    function otrazheniye() {
+        img_1 = document.getElementById('img_1');
+        img_1.style.transform='scale(-1, 1)';
+        text_1 = document.getElementById('text_1');
+        text_1.style.transform='scale(-1, 1)';
+    }
+
+    function uvelichit() {
+        img_1 = document.getElementById('img_1');
+        img_1.style.width="300px";
+        img_1.style.height="350px";
+        text_1 = document.getElementById("text_1");
+        text_1.style.fonSize="50px";
+    }
+
+    function transperency() {
+        img_1 = document.getElementById('img_1');
+        img_1.style.opacity="0.5";
+        text_1 = document.getElementById('text_1');
+        text_1.style.opacity="0.5";
+    }
+
+    function povernut() {
+        img_1=document.getElementById('img_1');
+        img_1.style.transform='rotate(30deg)';
+        text_1=document.getElementById("text_1");
+        text_1.style.transform='rotate(30deg)';
+    }
+
+    function invert() {
+        img_1=document.getElementById('img_1');
+        img_1.style.filter  = 'invert(100%)';
+    }
+
+    function uninvert() {
+        img_1=document.getElementById('img_1');
+        img_1.removeAttribute('style');
+    }
+
+    function twohundreed() {
+        img_1 = document.getElementById("img_1")
+        var select = document.getElementById("chan");
+        var value = select.value;
+        if (value == 1) {    
+            img_1.style.width='200px';
+            img_1.style.height='200px';
+        }
+        if (value == 2) {
+            img_1.style.width="300px";
+            img_1.style.height="300px";
+        }
+    }
+
+</script>
+
+<span id="text_1">Текст</span>
+</body>
+</html>

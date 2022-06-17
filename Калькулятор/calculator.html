@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Калькулятор</title>
+    <script>
+        function fold() {
+            var num_1 = Number(document.getElementById("num_1").value);
+            var num_2 = Number(document.getElementById("num_2").value);
+            document.getElementById("result").value = num_1 + num_2;
+        }
+        function substract() {
+            var num_1 = Number(document.getElementById("num_1").value);
+            var num_2 = Number(document.getElementById("num_2").value);
+            document.getElementById("result").value = num_1 - num_2;
+        }
+        function divide() {
+            var num_1 = Number(document.getElementById("num_1").value);
+            var num_2 = Number(document.getElementById("num_2").value);
+            document.getElementById("result").value = num_1 / num_2;
+        }
+        function myltiply() {
+            var num_1 = Number(document.getElementById("num_1").value);
+            var num_2 = Number(document.getElementById("num_2").value);
+            document.getElementById("result").value = num_1 * num_2;
+        }
+        function sqrt() {
+            var num_1 = Number(document.getElementById("num_1").value);
+            document.getElementById("result").value = Math.sqrt(num_1);
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <input id = "num_1" placeholder = "0" type = "number" required><br>
+        <input id = "num_2" placeholder = "0" type = "number" required><br>
+        <input id = "result" readonly><br>
+        <button onclick="fold()">Сложить</button>
+        <button onclick="substract()">Вычесть</button><br>
+        <button onclick="myltiply()">Умножить</button>
+        <button onclick="divide()">Разделить</button><br>
+        <button onclick="sqrt()">Корень из первого числа</button>
+    </div>
+</body>
+</html>

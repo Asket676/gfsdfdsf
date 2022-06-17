@@ -1,0 +1,45 @@
+.title_1{
+	position: absolute;
+	left:10px;
+	width:100px;
+	height:100px;
+	 background:red; 
+}
+ .title_2{ 
+	animation: scroll 7s linear 0s infinite; 
+     animation-duration: 7s; 
+     animation-timing-function: linear; 
+     animation-delay: 0s; 
+     animation-iteration-count: infinite;
+     animation-direction: normal; 
+     animation-fill-mode: none; 
+     animation-play-state: running; 
+     animation-name: scroll; 
+ } 
+
+ .b-marquee--rtl .b-marquee__text { 
+   -webkit-animation: animMarqueeRtl 5s linear infinite; 
+   animation: animMarqueeRtl 5s linear infinite; 
+ } 
+
+ @-webkit-keyframes animMarqueeRtl { 
+   0% { 
+     -webkit-transform: translateX(100%); 
+     transform: translateX(100%); 
+   } 
+   100% { 
+     -webkit-transform: translateX(0%); 
+     transform: translateX(0%); 
+   } 
+ } 
+
+ @keyframes animMarqueeRtl { 
+   0% { 
+     -webkit-transform: translateX(100%); 
+     transform: translateX(100%); 
+   } 
+   100% { 
+     -webkit-transform: translateX(0); 
+     transform: translateX(0); 
+   } 
+ } 

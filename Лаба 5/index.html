@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link href="style.css" rel="stylesheet" >
+</head>
+<body>
+	<div id="id1" style="position:absolute;left:10px;width:100px;height:100px;background:red;">Задание</div><br>
+	<script>
+		function beg ()
+		{
+		var obj = document.getElementById ('id1');
+		var SL = +obj.style.left
+		obj.style.left = SL++ + 'px';
+		setTimeout (beg, 100);
+		}
+		beg()
+		
+		
+	</script>
+	 <div class="b-marquee b-marquee--rtl"> 
+	 <div class="b-marquee__text">Текст</div> 
+	 </div> 
+</body>
+</html>

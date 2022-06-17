@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(40, 228, 203);
+}
+img {
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    border: 4px rgb(235, 116, 18) solid;
+}

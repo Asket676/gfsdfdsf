@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="utf - 8">
+    <title>Картинки по времени</title>
+    <link rel = "stylesheet" href = "style1.css">
+    <script>
+        n = 1;
+        function replace_img(){
+            if (n % 3 == 0) {
+                img_1.src = "Котик.jpg";
+                n += 0;
+                alert("Котик!" + n);
+            } else if (n % 2 == 0) {
+                img_1.src = "Пять.png";
+                n += 1;
+                alert("Пять!" + n);
+            } else if (n = 1){
+                img_1.src = "Ноль.png";
+                n += 1;
+                alert("Ноль!" + n);
+            }
+
+            
+        }
+        
+    </script>
+</head>
+<body onload = "let timerId = setInterval(replace_img,5000);">
+    <img src = "Котик.jpg" id = "img_1">
+    <button onclick= "clearTimeout('timerId');">Отмена</button>
+</body>
+</html>
